@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 60px repeat(5, 1fr) 100px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .item {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200%;
+        }
+
+        nav {
+            background-color: brown;
+            grid-area: span 1 / span 4;
+        }
+
+        header {
+            background-color: bisque;
+            grid-area: span 2 / span 4;
+        }
+
+        main {
+            background-color: cadetblue;
+            grid-area: span 3 / span 3;
+        }
+
+        aside {
+            background-color: cornflowerblue;
+            grid-area: span 3 / span 1;
+        }
+
+        .footer1 {
+            background-color: darkkhaki;
+            grid-area: span 1 / span 2;
+        }
+
+        .footer2 {
+            background-color: darkseagreen;
+            grid-area: span 1 / span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="item">[A] Nav</nav>
+    <header class="item">[B] Header</header>
+    <main class="item">[C] Main</main>
+    <aside class="item">[D] Aside</aside>
+    <div class="item footer1">[E] Footer 1</div>
+    <div class="item footer2">[F] Footer 2</div>
+</body>
+
+</html>
